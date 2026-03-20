@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 5% 97%;
+    --foreground: 120 30% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 30% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 30% 8%;
+
+    --primary: 120 55% 23%;
+    --primary-foreground: 120 20% 97%;
+
+    --secondary: 120 10% 92%;
+    --secondary-foreground: 120 30% 15%;
+
+    --muted: 120 8% 93%;
+    --muted-foreground: 120 5% 45%;
+
+    --accent: 120 15% 90%;
+    --accent-foreground: 120 30% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 10% 88%;
+    --input: 120 10% 88%;
+    --ring: 120 55% 23%;
+
+    --radius: 0.5rem;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 10%;
+    --critical: 16 90% 55%;
+    --critical-foreground: 0 0% 100%;
+    --success: 142 72% 40%;
+    --success-foreground: 0 0% 100%;
+    --info: 205 85% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --bin-green: 142 72% 40%;
+    --bin-yellow: 45 93% 47%;
+    --bin-orange: 25 95% 53%;
+    --bin-red: 0 84% 50%;
+
+    --sidebar-background: 120 30% 12%;
+    --sidebar-foreground: 120 10% 85%;
+    --sidebar-primary: 120 55% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 25% 18%;
+    --sidebar-accent-foreground: 120 10% 90%;
+    --sidebar-border: 120 20% 20%;
+    --sidebar-ring: 120 55% 45%;
+  }
+
+  .dark {
+    --background: 120 15% 7%;
+    --foreground: 120 5% 92%;
+
+    --card: 120 15% 10%;
+    --card-foreground: 120 5% 92%;
+
+    --popover: 120 15% 10%;
+    --popover-foreground: 120 5% 92%;
+
+    --primary: 120 55% 40%;
+    --primary-foreground: 120 30% 5%;
+
+    --secondary: 120 12% 18%;
+    --secondary-foreground: 120 5% 85%;
+
+    --muted: 120 10% 15%;
+    --muted-foreground: 120 5% 55%;
+
+    --accent: 120 15% 18%;
+    --accent-foreground: 120 5% 90%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 10% 18%;
+    --input: 120 10% 18%;
+    --ring: 120 55% 40%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 10%;
+    --critical: 16 90% 55%;
+    --critical-foreground: 0 0% 100%;
+    --success: 142 72% 40%;
+    --success-foreground: 0 0% 100%;
+    --info: 205 85% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --bin-green: 142 72% 45%;
+    --bin-yellow: 45 93% 55%;
+    --bin-orange: 25 95% 58%;
+    --bin-red: 0 84% 55%;
+
+    --sidebar-background: 120 25% 6%;
+    --sidebar-foreground: 120 10% 80%;
+    --sidebar-primary: 120 55% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 20% 12%;
+    --sidebar-accent-foreground: 120 10% 85%;
+    --sidebar-border: 120 15% 14%;
+    --sidebar-ring: 120 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+  }
+}
+
+/* Leaflet popup overrides */
+.leaflet-popup-content-wrapper {
+  @apply bg-card text-foreground rounded-lg shadow-lg border;
+}
+.leaflet-popup-content {
+  margin: 8px 12px !important;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.leaflet-popup-tip {
+  @apply bg-card;
+}
+.custom-bin-icon {
+  background: transparent !important;
+  border: none !important;
+}
